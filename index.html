@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahorcado</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="logo.png" class="logo">
+            <div id="div-desaparece" class="botonesHome">
+                <a href="#orca">
+                    <input class="botonIniciar" type="submit" value="Iniciar juego" id="iniciar-juego" onclick="iniciarJuego()">
+                    <button class="botonPalabra" id="nueva-palabra" onclick="ensenarPantallaDeAgregarPalabra()">Agregar Palabra</button>
+                </a>
+            </div>
+
+            <div id="agregar-palabra" class="palabraNueva">
+                <input class="textInput" type="text" id="input-nueva-palabra" maxlength="8" placeholder="Escriba una palabra">
+                <div class="formGroup">
+                    <img src="signo exclamacion.png" class="imagenAlerta">
+                    <label>Máximo 8 caracteres</label>
+                </div>
+                <div class="botonesDiv">
+                    <input class="botonAzul" type="submit" value="Guardar y empezar" id="boton-guardar">
+                    <input class="botonBlanco" type="submit" value="Cancelar" id="boton-cancelar">
+                </div>    
+
+            </div>
+            
+            <div id="div-aparece-ahorcado" class="canvas">
+                <canvas id="orca" width="1200" height="860"></canvas>
+                <div class="subrallado"></div>
+                <div class="botonesDivCanvas">
+                <input class="botonAzul" type="submit" value="Nuevo Juego" id="boton-nuevo-juego">
+                <input class="botonBlanco" type="submit" value="Salir" id="boton-salir">
+                </div>
+            </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="canvas.js"></script>
+</body>
+</html>
